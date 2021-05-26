@@ -1,6 +1,5 @@
 <?php
 /**
- * @author Hi Developer
  * @date   2021-05-26
  */
 
@@ -15,7 +14,6 @@ class AliTest
     public static function test()
     {
 
-
         $config = [
             'endpoint'  => 'ap-southeast-1.log.aliyuncs.com',
             'accessId'  => 'LTAI4GCPx',
@@ -25,8 +23,8 @@ class AliTest
 
         $log = new AliLog($config);
         $r   = $log->put(['apiMethodName' => 'test', 'apiRequestData' => 'xxx'],
-            'sg-dev-log-store',
-            'sg-dev-log',
+            'dev-store',
+            'dev-log',
         );
 
         AppLog::debug("写日志请求ID $r");

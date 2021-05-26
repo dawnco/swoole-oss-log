@@ -15,19 +15,9 @@ class Aliyun
 
     protected array $config = [];
 
-
     public function __construct(array $config)
     {
-        /**
-         * 格式
-         * [
-         * 'endpoint'  => 'oss-ap-southeast-1.aliyuncs.com',
-         * 'accessId'  => 'LTAI4GAJswKQ5zLJdKseUihC',
-         * 'secretKey' => 'EC5GLrV9sP3Sdsx9VxHNM84IN9jlkJ',
-         * ];
-         */
         $this->config = $config;
-
     }
 
     protected function authorization(array $header, string $type, string $method, string $resource, $canonicalizeHeaders = []): ?string

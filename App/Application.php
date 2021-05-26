@@ -1,6 +1,5 @@
 <?php
 /**
- * @author Dawnc
  * @date   2021-02-23
  */
 
