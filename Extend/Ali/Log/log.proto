@@ -1,0 +1,38 @@
+syntax="proto3";
+
+// 参考 https://www.jianshu.com/p/ce098058edf0
+// 需要安装  protobuf  扩展
+// pb composer http://www.wangwenyong.com/?p=250
+
+package extend.ali.log;
+
+message Content
+{
+     string Key = 1;
+     string Value = 2;
+}
+
+message Log
+{
+    uint32 Time = 1;// UNIX Time Format
+    repeated Content Contents = 2;
+}
+
+message LogTag
+{
+     string Key = 1;
+     string Value = 2;
+}
+
+message LogGroup
+{
+    repeated Log Logs= 1;
+    string Topic = 3;
+    string Source = 4;
+    repeated LogTag LogTags = 6;
+}
+
+message LogGroupList
+{
+    repeated LogGroup logGroups = 1;
+}

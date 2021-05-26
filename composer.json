@@ -1,0 +1,16 @@
+{
+  "require": {
+    "swoole/ide-helper": "^4.6",
+    "google/protobuf": "3.x"
+  },
+  "autoload": {
+    "files": [
+      "App/Helper/Function.php"
+    ],
+    "psr-4": {
+      "Extend\\Ali\\Log\\": "Extend/Ali/Log/Extend/Ali/Log/",
+      "GPBMetadata\\": "Extend/Ali/Log/GPBMetadata/",
+      "App\\": "App/"
+    }
+  }
+}
